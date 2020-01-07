@@ -119,7 +119,7 @@ link_fzf_in_path() {
 }
 
 try_curl() {
-  command -v curl > /dev/null &&
+  command -v curl -s > /dev/null &&
   if [[ $1 =~ tgz$ ]]; then
     curl -fL $1 | tar -xzf -
   else
